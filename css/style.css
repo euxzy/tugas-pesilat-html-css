@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  color: #feffff;
+  background: #0a0c1b;
+}
+main {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  max-width: 1024px;
+  background: #1c1938;
+  border-radius: 12px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  overflow: hidden;
+}
+.right {
+  order: 2;
+  width: 50%;
+}
+.right > img {
+  width: 100%;
+  filter: sepia(54%) brightness(60%) saturate(900%) hue-rotate(230deg) contrast(45%);
+}
+.left {
+  order: 1;
+  width: 50%;
+  padding: 0 72px;
+}
+.left > .title {
+  font: 700 32px/40px Inter, serif;
+  margin-bottom: 24px;
+}
+.left > .title > span {
+  color: #a25dd1;
+}
+.left > .desc {
+  font: 400 15px/24px Inter, serif;
+  margin-bottom: 56px;
+  opacity: .5;
+}
+.cards {
+  display: flex;
+  gap: 56px;
+}
+.cards > .item > h3 {
+  font: 700 18px 'Inter', serif;
+  margin-bottom: 6px;
+}
+.cards > .item > p {
+  font: 400 12px 'Inter', serif;
+  text-transform: uppercase;
+  opacity: .5;
+}
+
+@media screen and (max-width: 1023px) {
+  main {
+    height: max-content;
+  }
+  .container {
+    display: block;
+    width: 90%;
+    margin: 56px 0;
+  }
+  .left, .right {
+    width: 100%;
+  }
+  .left {
+    padding: 0 40px 40px;
+    text-align: center;
+  }
+  .right {
+    margin-bottom: 56px;
+  }
+  .cards {
+    flex-direction: column;
+    gap: 32px;
+  }
+  .cards > .item > h3 {
+    font-size: 28px;
+  }
+  .cards > .item > p {
+    font-size: 16px;
+  }
+}
